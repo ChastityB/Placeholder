@@ -1,9 +1,12 @@
 # Stroke Predictions Dataset
 
-##Data Dictionary
+## Summary
+This dataset was imported, cleaned, and visualized. The purpose of this is to help create a model that can determine if a patient is likely to get a stroke based on the metabolic parameters provided.
+
+## Data Dictionary
 
 Column Name | Data Type | Description
-------------|-----------|------------
+------------|:-----------:|------------
 id | Integer | Unique identifier
 gender | Object | "Male", "Female", "Other"
 age | Float | Age of patient
@@ -18,3 +21,29 @@ smoking_status | Object | "formerly smoked", "never smoked", "smokes" or "Unknow
 stroke | Integer | 1 if the patient had a stroke or 0 if not, target
 
 *Note: "Unknown" in smoking_status means that the information is unavailable for this patient
+
+## Data Cleaning
+* Fixed inconsistency of values
+
+## Data Visualization
+* Created plots to determine what factors affected chances of stroke
+
+## Machine Learning Model
+* Median Imputer used for numerical values
+* OneHotEncoded used for categorical values
+* Data was scaled
+
+## Model Comparison
+* KNN Classifier
+* Random Forest Classifier
+* XGBooster
+
+## Accuracy Comparisons
+| | KNN Classifier| Random Forest Classifier | XGBooster
+-------------|:---------------------------:|:----------:|:------:| 
+Baseline - Training| 96%| 100%| 96%
+Baseline - Testing| 94%|94%|96%
+Hypertuned - Training| 96%| 96%|96%
+Hypertuned - Testing| 94%|94%|94%
+
+
